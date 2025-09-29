@@ -8,7 +8,6 @@ public class Rotor {
         this.rotorValues = new String(v);
         this.startChar = c;
 
-        int pos = rotorValues.indexof(startChar);
         while (rotorValues.charAt(0) != startChar) {
             rotate();
         }
@@ -44,17 +43,28 @@ public class Rotor {
 
 
 
-        //
+        
                
-    }
+    
     
 
     public int indexOf(char c){
-        //TODO
+//get index of c
+    return rotorValues.indexOf(c);  
+    
+
     }
 
     public char charAt(int idx){
-        //TODO
+        //get char at indedx
+        
+         return rotorValues.charAt(idx);
     }
-}
-    
+
+
+
+//method to print the rotor current line
+ public String toString() {
+        return rotorValues;
+    }
+}    
