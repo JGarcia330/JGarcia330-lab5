@@ -19,14 +19,46 @@ public class Enigma{
     }
 
 
-    public String decrypt(String message){        
-        //TODO
+    public String decrypt(String message){    
+
+        
+        
+        
     }
 
 
     
     public String encrypt(String message){
-        //TODO
+     String result = "";
+      for (int k = 0; k < message.length(); k++) {
+        char c = message.charAt(k);
+
+
+        //finc c on inncer
+        int i = rotors[0].indexOf(c);
+        //the alligned character in outer
+        char t = rotors[2].charAt(i); 
+        //find that char in the middle
+        int j = rotors[1].indexOf(t);
+        //take that aligned from outer
+        char out = rotors[2].charAt(j); 
+
+        result = result + out;
+
+        rotate();
+
+      }
+
+      return result;
+
+
+
+
+
+
+
+
+        
     }
 
     
