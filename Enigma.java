@@ -20,9 +20,26 @@ public class Enigma{
 
 
     public String decrypt(String message){    
+        String result = "";
+      for (int k = 0; k < message.length(); k++) {
+        char c = message.charAt(k);
 
-        
-        
+        //reverse method of encrypt 
+
+        int j = rotors[2].indexOf(y);
+
+        char t1 = rotors[1].charAt(j);
+
+        int i = rotors[2].indexOf(t1);
+
+        char inner = rotors[0].charAt(i);
+
+        result = result + inner;
+
+
+        rotate();
+    }
+
         
     }
 
