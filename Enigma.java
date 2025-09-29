@@ -22,7 +22,8 @@ public class Enigma{
     public String decrypt(String message){    
         String result = "";
       for (int k = 0; k < message.length(); k++) {
-        char c = message.charAt(k);
+        char y = message.charAt(k);
+
 
         //reverse method of encrypt 
 
@@ -36,12 +37,10 @@ public class Enigma{
 
         result = result + inner;
 
-
-        rotate();
+      rotate();
     }
-
-        
-    }
+    return result; 
+}
 
 
     
